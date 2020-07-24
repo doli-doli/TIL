@@ -24,7 +24,7 @@
     - `connection.createStatment();` Statement 객체를 통해 SQL문이 실행된다.
 5. close();
 
-- JDBC 연결
+- DB 연결
   ~~~
   String driverName = "oracle.jdbc.driver.OracleDriver";
 	String url = "jdbc:oracle:thin:@localhost:1521:XE";

@@ -36,7 +36,7 @@ ${param.result }
 ## 조건문
 - test = "조건내용"
 
-  1. 조건비교 // ge 0 = x >= 0 // lt 0 = x < 0 
+1. 조건비교 // ge 0 = x >= 0 // lt 0 = x < 0 
 ~~~
 <c:if test="${result ge 60 }">
   <c:set var="pass" value="60점 이상"></c:set>
@@ -45,7 +45,7 @@ ${param.result }
   <c:set var="pass" value="60점 미만"></c:set>
 </c:if>
 ~~~
-  2. 다중조건비교
+2. 다중조건비교
 ~~~
 <c:choose>
   <c:when test="${result ge 90 }"><c:set var="grade" value="A"/></c:when>
@@ -55,8 +55,8 @@ ${param.result }
 </c:choose>
 ~~~
 ## 반복문
-  1. 일반 for문 forEach
-  형식 : for(String name : names)
+1. 일반 for문 forEach
+형식 : for(String name : names)
 ~~~
 <% 
 String[] names = {"김","이","박","최","신"};

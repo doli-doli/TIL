@@ -59,7 +59,7 @@ try {
 	}
 }
 ~~~
-
+					   
 ## EL(Expression Language)
 - JSP 에서 사용하는 새로운 스크립트 언어
 - 표현식을 대체하는 역할 

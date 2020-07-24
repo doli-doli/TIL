@@ -33,3 +33,49 @@
 	Class.forName(driverName);
 	Connection con = DriverManager.getConnection(url, "user", "password"); 
   ~~~
+  ## PreparedStatement 객체
+  	- SQL문 실행을 위해 사용하는 Statement 객체 스스로는 SQL 구문 이해 못함 -> 전달역할
+	- Statement 객체의 중복코드 단점을 보완한 객체
+~~~
+Connection conn = null;					
+PreparedStatement ps = null;
+
+	try {
+			conn = DBConnect.getConnection();
+			String sql = "create table sample ( " 
+						 + " no number primary key, "
+						 + " name varchar2(20) not null, "
+						 + " reg_date date not null)";
+			ps = conn.prepareStatement(sql);
+			ps.execute();
+			System.out.println("sample 테이블 생성 성공!");
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if( ps != null ) { ps.close(); }
+				if( conn != null ) { conn.close(); }
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+~~~
+
+## EL(Expression Language)
+- JSP 에서 사용하는 새로운 스크립트 언어
+- 표현식을 대체하는 역할 
+	1. <%= 변수값 %>
+	2. <%= 계산식 %>
+	3. <%= 함수() %>
+- 4가지 영역(객체)에서 사용
+pageContext, request, session, application
+
+## EL 내장객체
+- ${param } : 요청 파라미터를 참조하는 객체
+- ${paramValues } : 요청 파라미터(배열)를 참조하는 객체
+- ${pageScope } : 페이지 객체를 참조하는 객체
+- ${requestScope } : request 객체를 참조하는 객체
+- ${sessionScope } : session 객체를 참조하는 객체
+- ${applicationScope } : application 객체를 참조하는 객체
+- ${initParam } : 초기화 파라미터를 참조하는 객체
+- ${cookie } : cookie 객체를 참조하는 객체

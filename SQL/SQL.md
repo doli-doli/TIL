@@ -2,11 +2,11 @@
   - 사용해본 쿼리문 추가
   
   ## 순서
-  1. Connection conn = DBConnect.getConnection();
-  2. String sql = 쿼리문 delete from sample where id=? and pw=?;
-  3. PreparedStatement ps = conn.prepareStatement(sql);
-  4. ps.setString(1, id); ps.setString(2, pw);
-  5. int result = ps.executeUpdate();
+  1. Connection conn = DBConnect.getConnection(); DB 연결하고
+  2. String sql = 쿼리문 delete from sample where id=? and pw=?; 쿼리작성하고
+  3. PreparedStatement ps = conn.prepareStatement(sql); 쿼리담아서
+  4. ps.setString(1, id); ps.setString(2, pw); 쿼리 빈칸 채우고
+  5. int result = ps.executeUpdate(); 쏴주기!
   
   ## CREATE(JSP 파일)
   - create table

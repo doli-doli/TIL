@@ -59,7 +59,35 @@ try {
 	}
 }
 ~~~
-					   
+
+## DBCP (Data Base Connection Pool)
+- 다수의 요청이 발생할 경우 데이터베이스에 부하가 발생함
+- 미리 커넥션 객체들을 만들어 놓는 커넥션 풀 기법 사용
+
+### 주요속성
+1. name : 현재 Resource를 등록 할 이름
+2. type : 현재 Resource의 타입
+3. maxTotal : 생성할 커넥션의 숫자 ( == maxActive :버전차이)
+4. maxIdle :  Connection Pool에서 사용하지 않고 대기하는 최대 Connection의 개수(음수로 설정하면 제한 없음)
+5. maxWaitMillis : 최대 대기 시간 , (음수로 설정하면 제한 없음)( == maxWait)
+
+## DBCP 사용해보기
+~~~
+<Context>
+	<Resource
+		name="jdbc/oracle"
+		driverClassName="oracle.jdbc.driver.OracleDriver"
+		url ="jdbc:oracle:thin:@localhost:1521:xe"
+		username="root"
+		password="admin"
+		maxTotal="8"
+		maxIdle="2"
+		maxWaitMillis="5000"
+		type="javax.sql.DataSource"
+		/>
+	</Context>
+~~~
+
 ## EL(Expression Language)
 - JSP 에서 사용하는 새로운 스크립트 언어
 - 표현식을 대체하는 역할 

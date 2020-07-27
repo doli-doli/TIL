@@ -69,9 +69,9 @@ pageContext.setAttribute("NAMES",names);
   ${name }
 </c:forEach>
 ~~~
-# Ex)
-  1. 일반 forEach
-  - 최소 크기와 최대 크기를 직접 입력 받아 비교하여 작은 값부터 큰 값까지 차례대로 출력
+
+- 일반 forEach
+- 최소 크기와 최대 크기를 직접 입력 받아 비교하여 작은 값부터 큰 값까지 차례대로 출력
 ~~~
 최소 크기 : <input type="number" name="num1" min="1" max="7">
 최대 크기 : <input type="number" name="num2" min="1" max="7">

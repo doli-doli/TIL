@@ -1,6 +1,13 @@
 # SQL
   - 사용해본 쿼리문 추가
   
+  ## 순서
+  1. Connection conn = DBConnect.getConnection();
+  2. String sql = 쿼리문 delete from sample where id=? and pw=?;
+  3. PreparedStatement ps = conn.prepareStatement(sql);
+  4. ps.setString(1, id); ps.setString(2, pw);
+  5. int result = ps.executeUpdate();
+  
   ## CREATE(JSP 파일)
   - create table
   ~~~
@@ -15,7 +22,7 @@
  ~~~
  - insert
   ~~~
-  insert into member values(member_seq.nextval, ?, ?, ?, ?, ?, sysdate);
+  insert into member values(sample_seq.nextval, ?, ?);
   ~~~
   - update
   ~~~
@@ -29,3 +36,4 @@
   ~~~
   select * from sample order by ?;
   ~~~
+  

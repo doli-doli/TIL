@@ -7,6 +7,26 @@
   - 요청에 동적으로 작동하고, 응답은 html을 이용
   - jsp는 servlet으로 변환되어 실행 되고 .jsp.java로 변환, .jsp.class로 컴파일된다.
   
+## JSP 태그종류
+- <% 스크립틀릿, java code %>
+- <%= 표현식, 결과값 출력 %>
+- <%@ 지시자, 페이지 속성 %>
+- <%-- 주석 --%>
+- <%! 선언, 변수 메서드 선언 %>
+- jsp:action 자바 빈 연결 </jsp:action>
+
+## 태그 사용
+1. <%@ page %>
+- import문에 많이 사용
+`<%@page import="com.jh.ex.*"%>`
+`<%@ page import="java.sql.*"%>`
+`<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>`
+`<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>`
+
+2. <%@ include %>
+- file 속성 사용
+`<%@ include file="index.jsp"%>`
+
 ## JDBC
   - 자바에서 데이터베이스에 접속할 수 있도록 하는 자바 API이다. 
   - JDBC는 데이터베이스에서 쿼리 또는 업데이트하는 방법을 제공한다.

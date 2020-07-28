@@ -8,16 +8,16 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class testDao {
+public class TestDao {
 
 	private Connection conn = null;
 	private PreparedStatement ps = null;
 	private ResultSet rs = null;
 	private String sql = null;
 	
-	private testDao() {}
-	private static testDao dao = new testDao();
-	public static testDao getInstance() {
+	private TestDao() {}
+	private static TestDao dao = new TestDao();
+	public static TestDao getInstance() {
 		return dao;
 	}
 	
@@ -39,9 +39,9 @@ public class testDao {
 
 ## ArrayList 사용 (DAO)
 ~~~
-public List<testDto> getAllList() {
+public List<TestDto> getAllList() {
 	
-	List<testDto> list = new ArrayList<testDto>();
+	List<TestDto> list = new ArrayList<TestDto>();
 
 	try {
 		conn = getConnection();
@@ -77,11 +77,11 @@ return list;
 ## JSP파일
 ~~~
 <%
-List<GreenDto> list = testDao.getInstance().getAllList();
+List<TestDto> list = TestDao.getInstance().getAllList();
 %>
 <table>
 	<%if(list.size() > 0){%>
-		<%for(GreenDto dto : list){ %>
+		<%for(TestDto dto : list){ %>
 		<tr>
 			<td><%=dto.getIdx() %></td>
 			<td><%=dto.getId() %></td>

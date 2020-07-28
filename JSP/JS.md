@@ -1,6 +1,13 @@
 # JavaScript
 
-    
+## alert 쓰기
+~~~
+<script type="text/javascript">
+alert("테스트 성공!");
+history.back();
+</script>
+~~~
+
 ## 스크립틀릿 안에서 alert쓰기    
 ~~~
 <%

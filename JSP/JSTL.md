@@ -1,5 +1,3 @@
-## JSTL
-- 20-07-24 ~ 20-00-00 까지
 ## 선언부 
 - import에 선언
 - <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %><br/>

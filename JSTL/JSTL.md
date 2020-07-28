@@ -1,4 +1,4 @@
-# JSTL
+## JSTL
 - 20-07-24 ~ 20-00-00 까지
 ## 선언부 
 - import에 선언
@@ -101,3 +101,27 @@ ${animal }&nbsp;
 </c:forTokens>
 ~~~
 결과: 사자 호랑이 사슴 곰 이구아나 뱀
+
+## Bean
+- 반복적인 작업을 효율적으로 하기 위해 Bean을 사용한다.
+- jsp 페이지를 만들고 액션태그를 사용하여 빈을 사용한다.
+- Bean을 만든다는 것은 데이터 객체를 만들기 위한 클래스를 만드는 것.
+
+## Bean 사용
+- useBean - 빈을 사용한다고 명시할 때 사용.
+`<jsp:useBean id="dto" class="com.jh.DB.TestDto" scope=""/>`
+- id는 TestDto dto = new TestDto(); 할 때의 dto
+
+### Scope
+  page : 페이지 내에서만 사용 가능
+  request : 요청된 페이지 내에서만 사용 가능
+  session : 웹브라우저의 생명주기와 동일하게 사용 가능
+  application : 웹 어플리케이션 생명주기와 동일하게 사용 가능
+
+### setProperty - 값 설정함
+ - `<jsp:setProperty property="name" name="dto" value="홍길동"/>`
+- dto.setId(id); dto.setPw(pw); dto.setName(name); dto.setAge(Integer.parseInt(age)); dto.setId(addr);
+- 한줄로 표현가능
+ - `<jsp:setProperty property="*" name="dto" />`
+### getProperty - 값 가져옴
+  - `<jsp:getProperty property="name" name="dto" />`

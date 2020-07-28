@@ -95,6 +95,7 @@ try {
 5. maxWaitMillis : 최대 대기 시간 , (음수로 설정하면 제한 없음)( == maxWait)
 
 ## DBCP 사용해보기
+- context.xml파일 WebContent->Meta-INF저장
 ~~~
 <Context>
 	<Resource

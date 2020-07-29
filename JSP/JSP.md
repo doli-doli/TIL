@@ -133,7 +133,7 @@ pageContext, request, session, application
 
 ## 파일 U&D
 - 파일 업로드 다운로드
-1. cos.jar 파일 빌드패스
-2. WebContent -> 폴더생성 -> 해당위치를 업로드 위치로 사용
-3. <form method="post" enctype="multipart/form-data">
-4. 일반 request 대신 MultipartUrequest 클래스를 사용한다.
+	1. cos.jar 파일 빌드패스
+	2. WebContent -> 폴더생성 -> 해당위치를 업로드 위치로 사용
+	3. 폼 태그`<form method="post" enctype="multipart/form-data">`
+	4. 일반 request 대신 MultipartUrequest 클래스를 사용한다.

@@ -8,7 +8,7 @@
   4. ps.setString(1, id); ps.setString(2, pw); 쿼리 빈칸 채우고
   5. int result = ps.executeUpdate(); 쏴주기!
   
-  ## CREATE(JSP 파일)
+  ## 
   - create table
   ~~~
   create table sample ( "

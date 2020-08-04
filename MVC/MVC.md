@@ -6,7 +6,7 @@
 ## V(View) - JSP
 - 모델은 여러 개의 뷰(view)를 가질 수 있다.
 - 뷰는 모델에게 질의를 하여 모델로 부터 값을 가져와 사용자에게 보여준다.
-## C(Controller) - Servle
+## C(Controller) - Servlet
 - 뷰는 여러 개의 컨트롤러(Controller)를 가지고 있다.
 - 사용자는 컨트롤러를 사용하여 모델의 상태를 바꾼다.
 - 컨트롤러는 모델의 mutator 함수를 호출하여 상태를 바꾼다.

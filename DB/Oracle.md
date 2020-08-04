@@ -7,3 +7,4 @@
  2. sysdba에 연결 `conn /as sysdba;`
  3. hr계정 잠금상태를 푼다. `alter user hr account unlock;`
  4. 사용할 비밀번호를 설정 `alter user hr identified by 비밀번호;`
+ 5. 권한 부여 `grant connect, dba, resource to hr;`

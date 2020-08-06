@@ -119,7 +119,23 @@ try {
 	2. <%= 계산식 %>
 	3. <%= 함수() %>
 - 4가지 영역(객체)에서 사용
-pageContext, request, session, application
+
+# pageContext
+1. 하나의 페이지를 처리할 때 사용하는 영역
+2. page 영역
+3. 해당 페이지를 벗어나면 데이터가 삭제됨
+# request
+1. 하나의 요청을 처리할 때 사용하는 영역
+2. request 영역
+3. response 하면 데이터가 삭제됨
+# session
+1. 하나의 웹 브라우저를 처리할 때 사용하는 영역
+2. session 영역
+3. 웹 브라우저를 종료하면 데이터가 삭제됨
+# application
+1. 하나의 웹 에플리케이션에서 사용하는 영역
+2. application영역
+3. 웹 어플리케이션을 종료하면 데이터가 삭제됨
 
 ## EL 내장객체
 - ${param } : 요청 파라미터를 참조하는 객체

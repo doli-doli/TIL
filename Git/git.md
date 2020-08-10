@@ -1,6 +1,6 @@
 ## 초기 USER 설정
   1. 유저네임 설정 `git config --global user.name "doli-doli"`
-  2. 이메일 설정 `git config --global user.email "cho5356@gmail.com"`
+  2. 이메일 설정 `git config --global user.email "mail@gmail.com"`
   
 ## 파일이나 폴더 올리기
   1. 로컬 저장소로 이동

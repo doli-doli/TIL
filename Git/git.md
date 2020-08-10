@@ -18,4 +18,4 @@
   1. Gem 파일안에 `gem 'jekyll-admin', group: :jekyll_plugins` 추가
   2. cmd 창에서 블로그 레파지토리 저장소 경로 잡기
   3. `# bundle install # jekyll serve ` 입력
-  4. `http://localhost:4000/admin/` 접속 후 이용
+  4. [http://localhost:4000/admin/] 접속 후 이용

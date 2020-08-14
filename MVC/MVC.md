@@ -4,8 +4,8 @@
 #### 서비스클래스 or 자바빈(model 2)
 - 모델(model)이란 어떠한 동작을 수행하는 코드를 말한다.
 - 모델은 순수하게 public 함수로만 이루어진다.
-## V(View) - JSP(model 2)
-#### JSP페이지
+## V(View) - JSP
+#### JSP페이지(model 2)
 - 모델은 여러 개의 뷰(view)를 가질 수 있다.
 - 뷰는 모델에게 질의를 하여 모델로 부터 값을 가져와 사용자에게 보여준다.
 ## C(Controller) - Servlet

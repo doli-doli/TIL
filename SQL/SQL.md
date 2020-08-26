@@ -10,11 +10,19 @@
   
   ## 사용
   - create table
+  1. 클래스에서 사용
   ~~~
   create table sample ( "
 	+ " no number primary key, "
 	+ " name varchar2(20) not null, "
 	+ " reg_date date not null)";
+~~~
+2. sql문
+~~~
+create table sample (
+	no number primary key,
+	name varchar2(20) not null,
+	reg_date date not null);
 ~~~
   - create sequence (1씩 증가하는 시퀀스)
  ~~~

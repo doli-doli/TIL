@@ -27,7 +27,7 @@ create table sample (
 
 - 제약조건명 설정 PK 지정
  
- 1. 하나의 컬럼을 이용하여 간단하게 기본키를 지정한다.
+ 1. 하나의 컬럼을 이용하여 간단하게 기본키를 지정한다. <br/>
 	컬럼명 타입 [CONSTRAINT 제약조건이름]  PRIMARY KEY
 
 ~~~
@@ -44,7 +44,7 @@ email varchar2(50) not null UNIQUE
 );
 ~~~
 
-2. 하나이상의 컬럼을 이용하여 기본키를 지정 할 수 있다.
+2. 하나이상의 컬럼을 이용하여 기본키를 지정 할 수 있다. <br/>
 	CONSTRAINT 제약조건이름 PRIMARY KEY (컬럼명,컬럼명)
 
 ~~~

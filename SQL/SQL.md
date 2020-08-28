@@ -46,12 +46,14 @@ create table sample (
   select * from sample order by ?;
   ~~~
   - between A and B
+  
   employees(사원 테이블) 테이블에서 사원 아이디(employee_id)가 150~170 사이인 사원들의 email 현황을 조회합니다.
   
   ~~~
   select email from employees where employee_id between 150 and 170;
   ~~~
   - 별칭 사용하기 / AS 별칭
+  
   employees(사원 테이블) 테이블에서 사원 아이디(employee_id)가 150~170 사이인 사원들의 email 현황을 "이메일" 이라는 별칭으로 조회합니다.
   ~~~
   select email as 이메일 from employees where employee_id between 150 and 170;

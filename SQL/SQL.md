@@ -8,8 +8,8 @@
   4. ps.setString(1, id); ps.setString(2, pw); 쿼리 빈칸 채우고
   5. int result = ps.executeUpdate(); 쏴주기!
   
-  ## 사용
-  - create table
+  ## create
+  - table
   1. 클래스에서 사용
   ~~~
   create table sample ( "
@@ -24,23 +24,65 @@ create table sample (
 	name varchar2(20) not null,
 	reg_date date not null);
 ~~~
-  - create sequence (1씩 증가하는 시퀀스)
+
+- 제약조건명 설정 PK 지정
+ 
+ 1. 하나의 컬럼을 이용하여 간단하게 기본키를 지정한다.
+	컬럼명 타입 [CONSTRAINT 제약조건이름]  PRIMARY KEY
+
+~~~
+create table board_tbl ( 
+
+id number(10) CONSTRAINT board_id_pk PRIMARY KEY, 
+
+title varchar2(200) not null, 
+
+name varchar2(20) not null,
+
+email varchar2(50) not null UNIQUE
+
+);
+~~~
+
+2. 하나이상의 컬럼을 이용하여 기본키를 지정 할 수 있다.
+	CONSTRAINT 제약조건이름 PRIMARY KEY (컬럼명,컬럼명)
+
+~~~
+create table board_tbl ( 
+
+id number(10), 
+
+title varchar2(200) not null, 
+
+name varchar2(20) not null,
+
+email varchar2(50) not null UNIQUE,
+
+CONSTRAINT test PRIMARY KEY(id,title)
+);
+~~~
+
+- create sequence (1씩 증가하는 시퀀스)
  ~~~
  create sequence sample_seq start with 1 increment by 1
  ~~~
- ## insert
+
+## insert
   ~~~
   insert into member values(sample_seq.nextval, ?, ?);
   ~~~
-  ## update
+
+## update
   ~~~
   update sample set name = ? where name = 'bart'
   ~~~
-  ## delete
+
+## delete
   ~~~
   delete from sample where id=? and pw=?;
   ~~~
-  ## select
+
+## select
   - 기본 검색
   ~~~
   select * from sample order by ?;

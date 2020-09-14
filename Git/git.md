@@ -24,3 +24,10 @@
   1. error: unable to create file ...파일경로 (Filename too long) 에러. 윈도우 API의 파일 경로 길이가 260자 제한을 갖기 때문<br/> 
   -> 1. Git Bash 관리자 권한으로 실행<br/> 
   -> 2. `git config --system core.longpaths true`
+  
+  2. The file will have its original line endings in your working directory / warning: LF will be replaced by CRLF.  <br/>
+  맥 또는 리눅스를 쓰는 개발자와 윈도우 쓰는 개발자가 Git으로 협업할 때 발생하는 Whitespace 에러. 유닉스 시스템에서는 한 줄의 끝이 LF(Line Feed)로 이루어지는 반면,<br/>
+  윈도우에서는 줄 하나가 CR(Carriage Return)와 LF(Line Feed), 즉 CRLF로 이루어지기 때문이다. 따라서 어느 한 쪽을 선택할지 Git에게 혼란이 온 것<br/>
+  -> 윈도우) `git config --global core.autocrlf true` <br/>
+  -> 리눅스나 맥) `git config --global core.autocrlf true input` <br/>
+  -> 물론 시스템 전체가 아닌 해당 프로젝트에만 적용하고 싶다면 —global 을 빼주면 된다.<br/>

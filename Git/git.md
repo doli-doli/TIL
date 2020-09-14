@@ -22,5 +22,5 @@
 
 ## error 처리
   1. error: unable to create file ...파일경로 (Filename too long) 에러. 윈도우 API의 파일 경로 길이가 260자 제한을 갖기 때문<br/> 
-  -> 1. Git Bash 관리자 권한으로 실행 
+  -> 1. Git Bash 관리자 권한으로 실행<br/> 
      2. `git config --system core.longpaths true`

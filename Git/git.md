@@ -19,3 +19,8 @@
   2. cmd 창에서 블로그 레파지토리 저장소 경로 잡기
   3. `# bundle install # jekyll serve ` 입력
   4. `http://localhost:4000/admin/`[링크](http://localhost:4000/admin/) 접속 후 이용
+
+## error 처리
+  1. error: unable to create file ...파일경로 (Filename too long) 에러. 윈도우 API의 파일 경로 길이가 260자 제한을 갖기 때문 
+  -> 1. Git Bash 관리자 권한으로 실행 
+     2. `git config --system core.longpaths true`

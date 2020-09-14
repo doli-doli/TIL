@@ -31,3 +31,7 @@
   -> 윈도우) `git config --global core.autocrlf true` <br/>
   -> 리눅스나 맥) `git config --global core.autocrlf true input` <br/>
   -> 물론 시스템 전체가 아닌 해당 프로젝트에만 적용하고 싶다면 —global 을 빼주면 된다.<br/>
+  
+  3. fatal: Unable to create '경로.git/index.lock': File exists. 잘못 커밋했을 경우 생기는 에러<br/>
+  -> 에러경로로 이동해서 `rm -rf ./.git/index.lock`<br/>
+  

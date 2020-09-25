@@ -34,7 +34,15 @@
   
   3. fatal: Unable to create '경로.git/index.lock': File exists. 잘못 커밋했을 경우 생기는 에러<br/>
   -> 에러경로로 이동해서 `rm -rf ./.git/index.lock`<br/>
-  
+
+
+## branch 생성,삭제,전환
+  1. git branch [name] / 생성
+  2. git branch -d [name] / 삭제
+  3. git chechout [nmae] / 전환
+  4. git chechout -b [nmae] / 브랜치 생성 후 전환
+
+
 ## add,commit 취소
   - git add 취소하기(파일 상태를 Unstage로 변경하기)<br/>
     1.git reset HEAD [file] 명령어를 통해 git add를 취소할 수 있다. 뒤에 파일명이 없으면 add한 파일 전체를 취소한다.

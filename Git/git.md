@@ -35,3 +35,23 @@
   3. fatal: Unable to create '경로.git/index.lock': File exists. 잘못 커밋했을 경우 생기는 에러<br/>
   -> 에러경로로 이동해서 `rm -rf ./.git/index.lock`<br/>
   
+## add,commit 취소
+  - git add 취소하기(파일 상태를 Unstage로 변경하기)<br/>
+    1.git reset HEAD [file] 명령어를 통해 git add를 취소할 수 있다. 뒤에 파일명이 없으면 add한 파일 전체를 취소한다.
+  
+  - git commit 취소하기
+    1. 너무 일찍 commit 했거나 어떤 파일을 빼먹고 commit 했을 경우 <br/>
+     `commit 목록 확인 / git log` <br/>
+~~~
+[방법 1] commit을 취소하고 해당 파일들은 staged 상태로 워킹 디렉터리에 보존
+$ git reset --soft HEAD^
+[방법 2] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에 보존
+$ git reset --mixed HEAD^ // 기본 옵션
+$ git reset HEAD^ // 위와 동일
+$ git reset HEAD~2 // 마지막 2개의 commit을 취소
+[방법 3] commit을 취소하고 해당 파일들은 unstaged 상태로 워킹 디렉터리에서 삭제
+$ git reset --hard HEAD^
+~~~
+
+  2. commit message 변경하기<br/>
+  commit message를 잘못 적은 경우, `git commit –amend` 명령어를 통해 git commit message를 변경할 수 있다.

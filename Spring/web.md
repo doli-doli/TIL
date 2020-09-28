@@ -1,6 +1,6 @@
 # web.xml
 
-## <web-app> Element
+## \<web-app\> Element
 web.xml의 Root-Element 기능을 담당한다.
 - xmlns와 servlet의 버전을 설정
 ~~~
@@ -10,11 +10,11 @@ web.xml의 Root-Element 기능을 담당한다.
 </web-app>
 ~~~
 
-## <display-name> Element
+## \<display-name\> Element
 web.xml 파일의 title을 설정하는 부분이다.
 default 값 = 프로젝트명으로 설정된다.
 
-## <welcome-file-list> Element
+## \<welcome-file-list\> Element
 서버로 요청이 들어왔을 때 표시할 처음 페이지 welcome-file을 순서대로 정의하는 부분이다.
 
 - welcome-file : 파일이름
@@ -26,10 +26,10 @@ default 값 = 프로젝트명으로 설정된다.
 	</welcome-file-list>
 ~~~
 
-## <context-param> Element
+## \<context-param\> Element
 Servlet context의 parameter를 선언해주는 부분이다.
 web.xml의 전역 변수 같은 느낌이다
-<init-param>은 지역변수라고 생각하면 이해가 쉽다.
+\<init-param\>은 지역변수라고 생각하면 이해가 쉽다.
 
 - param-name: parameter 이름
 - param-value: parameter 값
@@ -40,7 +40,7 @@ web.xml의 전역 변수 같은 느낌이다
 </context-param>
 ~~~
 
-## <error-page> Element
+## \<error-page\> Element
 errorcode, exception type 을 매핑하기 위한 부분.
 
 - error-code: 웹의 에러 코드를 적어주는 변수
@@ -57,7 +57,7 @@ errorcode, exception type 을 매핑하기 위한 부분.
 </error-page>
 ~~~
 
-## <listener> Element
+## \<listener\> Element
 Application Listener Bean을 가리키기 위한 부분으로,
 이때 해당 Bean은 웹 애플리케이션에 등록이 되어있어야 한다.
 
@@ -69,7 +69,7 @@ Application Listener Bean을 가리키기 위한 부분으로,
 </listener>
 ~~~
 
-## <filter> Element
+## \<filter\> Element
 Application에서 사용할 filter를 선언하는 부분이다.
 어떤 filter를 사용할 것인지 설정하는 부분으로, 대표적으로 encodingFilter가 있다.
 
@@ -89,7 +89,7 @@ Application에서 사용할 filter를 선언하는 부분이다.
 </filter>
 ~~~
 
-## <filter-mapping> Element
+## \<filter-mapping\> Element
 <filter> element는 사용할 필터를 설정하는 부분이고,
 <filter-mapping> Element는 filter를 어디에 적용할 것인지를
 URL 또는 Servlet을 통해 선언하는 부분이다.
@@ -105,7 +105,7 @@ URL 또는 Servlet을 통해 선언하는 부분이다.
 </filter-mapping>
 ~~~
 
-## <servlet> Element
+## \<servlet\> Element
 Servlet을 선언할 때 사용하는 Element로, 선언에 필요한 정보를 담고 있다.
 흔히 spring에서 DispatcherServlet을 선언할 때 자주 볼 수 있다.
 
@@ -125,7 +125,7 @@ Servlet을 선언할 때 사용하는 Element로, 선언에 필요한 정보를 
 </servlet>
 ~~~
 
-## <servlet-mapping> Element
+## \<servlet-mapping\> Element
 Servlet과 URL 사이의 매핑을 정의하는 부분이다.
 
 - servlet-name: 매핑할 servlet-name을 선언하는 부분
